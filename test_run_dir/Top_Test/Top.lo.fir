@@ -31,14 +31,14 @@ circuit Top :
     input io_insmRsp_bits_dataResponse : UInt<32>
     input io_insmRsp_bits_error : UInt<1>
 
-    node _io_inst_T = mux(io_insmRsp_valid, io_insmRsp_bits_dataResponse, UInt<1>("h0")) @[insMem.scala 42:19]
-    io_inst <= _io_inst_T @[insMem.scala 42:13]
-    io_insmReq_valid <= UInt<1>("h0") @[insMem.scala 31:22]
-    io_insmReq_bits_addrRequest <= io_Addr @[insMem.scala 39:33]
+    node _io_inst_T = mux(io_insmRsp_valid, io_insmRsp_bits_dataResponse, UInt<1>("h0")) @[insMem.scala 36:19]
+    io_inst <= _io_inst_T @[insMem.scala 36:13]
+    io_insmReq_valid <= UInt<1>("h1") @[insMem.scala 31:22]
+    io_insmReq_bits_addrRequest <= io_Addr @[insMem.scala 35:33]
     io_insmReq_bits_dataRequest <= UInt<1>("h0") @[insMem.scala 30:33]
     io_insmReq_bits_activeByteLane <= UInt<4>("hf") @[insMem.scala 33:36]
     io_insmReq_bits_isWrite <= UInt<1>("h0") @[insMem.scala 32:29]
-    io_insmRsp_ready <= UInt<1>("h1") @[insMem.scala 36:22]
+    io_insmRsp_ready <= UInt<1>("h1") @[insMem.scala 34:22]
 
   module frwdUnit :
     input clock : Clock

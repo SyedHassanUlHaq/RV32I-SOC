@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/hassan/Documents/RV32I SOC/src/main/scala/SOC/InstrMemOut.scala:18:8: value dccmRsp is not a member of chisel3.Bundle{val insmReq: chisel3.util.DecoupledIO[caravan.bus.common.AbstrRequest]; val insmRsp: chisel3.util.DecoupledIO[caravan.bus.common.AbstrResponse]}[0m
-[0m[[0m[31merror[0m] [0m[0m    io.dccmRsp.bits.error := 0.B[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hassan/Documents/RV32I SOC/src/main/scala/SOC/insMem.scala:39:8: value insReq is not a member of chisel3.Bundle{val Addr: chisel3.UInt; val inst: chisel3.UInt; val insmReq: chisel3.util.DecoupledIO[caravan.bus.common.AbstrRequest]; val insmRsp: chisel3.util.DecoupledIO[caravan.bus.common.AbstrResponse]}[0m
+[0m[[0m[31merror[0m] [0m[0m    io.insReq.bits.dataRequest := DontCare[0m
 [0m[[0m[31merror[0m] [0m[0m       ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

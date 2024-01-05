@@ -28,16 +28,10 @@ class instMemory (val req:AbstrRequest, val rsp:AbstrResponse)(implicit val conf
  //       io.inst := 0.S
  //   }
     io.insmReq.bits.dataRequest := 0.U
-    io.insmReq.valid := 0.U
+    io.insmReq.valid := 1.B
     io.insmReq.bits.isWrite := 0.U
     io.insmReq.bits.activeByteLane := "b1111".U
-    // io.insmReq.ready := 0.B
-
     io.insmRsp.ready := 1.B
-    // io.insmReq.bits.activeByteLane := "b1111".U
-    // io.insmReq.bits.dataRequest := io.rdAddr.asUInt()
     io.insmReq.bits.addrRequest := io.Addr
-    // io.insmReq.bits.isWrite := io.writeData
-    // io.insmReq.valid := Mux(io.writeData.asBool | io.readData.asBool(), 1.B, 0.B)
     io.inst := Mux(io.insmRsp.valid, io.insmRsp.bits.dataResponse, 0.U)
 }

@@ -19,13 +19,13 @@ circuit Top :
     output io : {flip Addr : UInt<32>, inst : UInt<32>, insmReq : {flip ready : UInt<1>, valid : UInt<1>, bits : {addrRequest : UInt<32>, dataRequest : UInt<32>, activeByteLane : UInt<4>, isWrite : UInt<1>}}, flip insmRsp : {flip ready : UInt<1>, valid : UInt<1>, bits : {dataResponse : UInt<32>, error : UInt<1>}}}
     
     io.insmReq.bits.dataRequest <= UInt<1>("h00") @[insMem.scala 30:33]
-    io.insmReq.valid <= UInt<1>("h00") @[insMem.scala 31:22]
+    io.insmReq.valid <= UInt<1>("h01") @[insMem.scala 31:22]
     io.insmReq.bits.isWrite <= UInt<1>("h00") @[insMem.scala 32:29]
     io.insmReq.bits.activeByteLane <= UInt<4>("h0f") @[insMem.scala 33:36]
-    io.insmRsp.ready <= UInt<1>("h01") @[insMem.scala 36:22]
-    io.insmReq.bits.addrRequest <= io.Addr @[insMem.scala 39:33]
-    node _io_inst_T = mux(io.insmRsp.valid, io.insmRsp.bits.dataResponse, UInt<1>("h00")) @[insMem.scala 42:19]
-    io.inst <= _io_inst_T @[insMem.scala 42:13]
+    io.insmRsp.ready <= UInt<1>("h01") @[insMem.scala 34:22]
+    io.insmReq.bits.addrRequest <= io.Addr @[insMem.scala 35:33]
+    node _io_inst_T = mux(io.insmRsp.valid, io.insmRsp.bits.dataResponse, UInt<1>("h00")) @[insMem.scala 36:19]
+    io.inst <= _io_inst_T @[insMem.scala 36:13]
     
   module frwdUnit : 
     input clock : Clock
