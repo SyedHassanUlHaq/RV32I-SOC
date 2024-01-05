@@ -1,1 +1,3 @@
 1704480126776:exit
+1704480196457:testOnly SOC.Topfile_Test -- -DwriteVcd=1
+1704480249757:exit
