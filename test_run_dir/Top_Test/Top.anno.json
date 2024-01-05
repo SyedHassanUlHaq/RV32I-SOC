@@ -4,16 +4,67 @@
     "file":"test_run_dir/Top_Test/Top.lo.fir"
   },
   {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|TilelinkHost",
+    "duplicate":"~Top|Top/dMem_Adapter:TilelinkAdapter/tlHost:TilelinkHost",
+    "index":0.7407407407407407
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|TilelinkDevice",
+    "duplicate":"~Top|Top/dMem_Adapter:TilelinkAdapter/tlSlave:TilelinkDevice",
+    "index":0.7777777777777778
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|TilelinkAdapter",
+    "duplicate":"~Top|Top/dMem_Adapter:TilelinkAdapter",
+    "index":0.8148148148148148
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|TilelinkHost_1",
+    "duplicate":"~Top|Top/iMem_Adapter:TilelinkAdapter/tlHost:TilelinkHost",
+    "index":0.8888888888888888
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|TilelinkDevice_1",
+    "duplicate":"~Top|Top/iMem_Adapter:TilelinkAdapter/tlSlave:TilelinkDevice",
+    "index":0.9259259259259259
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Top|TilelinkAdapter_1",
+    "duplicate":"~Top|Top/iMem_Adapter:TilelinkAdapter",
+    "index":0.9629629629629629
+  },
+  {
     "class":"firrtl.EmitCircuitAnnotation",
     "emitter":"firrtl.LowFirrtlEmitter"
   },
   {
     "class":"firrtl.transforms.DontTouchAnnotation",
-    "target":"~Top|TilelinkHost>io_reqIn_valid"
+    "target":"~Top|Top/iMem_Adapter:TilelinkAdapter/tlHost:TilelinkHost>io_reqIn_valid"
   },
   {
     "class":"firrtl.transforms.DontTouchAnnotation",
-    "target":"~Top|TilelinkHost>stateReg"
+    "target":"~Top|Top/iMem_Adapter:TilelinkAdapter/tlHost:TilelinkHost>stateReg"
+  },
+  {
+    "class":"firrtl.annotations.LoadMemoryAnnotation",
+    "target":"Top.instrMemOut.mem",
+    "fileName":"/home/hassan/Documents/Assemble.txt",
+    "hexOrBinary":"h",
+    "originalMemoryNameOpt":"mem"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|Top/dMem_Adapter:TilelinkAdapter/tlHost:TilelinkHost>io_reqIn_valid"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|Top/dMem_Adapter:TilelinkAdapter/tlHost:TilelinkHost>stateReg"
   },
   {
     "class":"firrtl.transforms.DontTouchAnnotation",
@@ -689,18 +740,51 @@
   },
   {
     "class":"firrtl.transforms.DontTouchAnnotation",
-    "target":"~Top|instrMem>io_instr"
+    "target":"~Top|instMemory>io_Addr"
   },
   {
     "class":"firrtl.transforms.DontTouchAnnotation",
-    "target":"~Top|instrMem>io_addr"
+    "target":"~Top|instMemory>io_inst"
   },
   {
-    "class":"firrtl.annotations.LoadMemoryAnnotation",
-    "target":"Top.instrMem.mem",
-    "fileName":"/home/hassan/Documents/Assemble.txt",
-    "hexOrBinary":"h",
-    "originalMemoryNameOpt":"mem"
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmReq_ready"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmReq_valid"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmReq_bits_addrRequest"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmReq_bits_dataRequest"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmReq_bits_activeByteLane"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmReq_bits_isWrite"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmRsp_ready"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmRsp_valid"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmRsp_bits_dataResponse"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instMemory>io_insmRsp_bits_error"
   },
   {
     "class":"firrtl.transforms.DontTouchAnnotation",

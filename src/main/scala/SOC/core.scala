@@ -10,13 +10,16 @@ class Core(val req:AbstrRequest, val rsp:AbstrResponse)(implicit val config:BusC
 
         val dmemReq = Decoupled(req)
         val dmemRsp = Flipped(Decoupled(rsp))
+
+        val imemReq = Decoupled(req)
+        val imemRsp = Flipped(Decoupled(rsp))
     })
     io.out := 0.U
 
     
     val pC_mod = Module(new pC)
     dontTouch(pC_mod.io)
-    val instrMem_mod = Module(new instrMem)
+    val instrMem_mod = Module(new instMemory(req, rsp))
     dontTouch(instrMem_mod.io)
     val frwdunit_mod = Module(new frwdUnit)
     dontTouch(frwdunit_mod.io)
@@ -55,12 +58,15 @@ class Core(val req:AbstrRequest, val rsp:AbstrResponse)(implicit val config:BusC
 
 //  PC AND INSTR MEMORY
     pC_mod.io.in := pC_mod.io.pc4
-    instrMem_mod.io.addr := pC_mod.io.out(21, 2).asUInt()
+    // instrMem_mod.io.addr := pC_mod.io.out(21, 2).asUInt()
+    instrMem_mod.io.Addr := pC_mod.io.out(21, 2).asUInt()
+    io.imemReq <> instrMem_mod.io.insmReq
+    instrMem_mod.io.insmRsp <> io.imemRsp
 
 //  if/id pipeline registers input
     if_id_mod.io.in_pc := pC_mod.io.out
     if_id_mod.io.in_pc4 := pC_mod.io.pc4
-    if_id_mod.io.in_inst := instrMem_mod.io.instr
+    if_id_mod.io.in_inst := instrMem_mod.io.inst
 
     control_mod.io.op_code := if_id_mod.io.inst_out(6, 0)
     
@@ -254,7 +260,7 @@ class Core(val req:AbstrRequest, val rsp:AbstrResponse)(implicit val config:BusC
         if_id_mod.io.in_inst := hazardDetection_mod.io.if_id_inst_out
         if_id_mod.io.in_pc := hazardDetection_mod.io.pc_out
     }.otherwise{
-        if_id_mod.io.in_inst := instrMem_mod.io.instr
+        if_id_mod.io.in_inst := instrMem_mod.io.inst
     }
 
     when(hazardDetection_mod.io.pc_frwd === "b1".U) {
@@ -370,5 +376,5 @@ class Core(val req:AbstrRequest, val rsp:AbstrResponse)(implicit val config:BusC
 //
   //  val strc_fB_mux = Mux(strc_detect_mod.io.frwd_B.asBool(), mem_wr_mod.io.aluOut_out, readData2Mux)
   //  id_ex_mod.io.in_rs2 := strc_fB_mux
-    io.out := instrMem_mod.io.instr
+    io.out := instrMem_mod.io.inst
 }
