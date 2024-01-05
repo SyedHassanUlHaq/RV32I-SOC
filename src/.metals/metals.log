@@ -1,0 +1,44 @@
+2022.10.12 12:27:10 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/.metals/lsp.trace.json or /home/hassan/.cache/metals/lsp.trace.json
+2022.10.12 12:27:11 INFO  logging to file /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/.metals/metals.log
+2022.10.12 12:27:11 INFO  Started: Metals version 0.11.9 in workspace '/home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src' for client Visual Studio Code 1.71.0.
+2022.10.12 12:27:13 INFO  time: initialize in 2.29s
+2022.10.12 12:27:16 WARN  Build server is not auto-connectable.
+2022.10.12 12:27:16 WARN  no build tool detected in workspace '/home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.10.12 12:27:16 WARN  no build target for: /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/main/scala/SingleCycle/Top_File.scala
+2022.10.12 12:27:20 INFO  shutting down Metals
+2022.10.12 12:27:24 INFO  no build target found for /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/main/scala/SingleCycle/Top_File.scala. Using presentation compiler with project's scala-library version: 3.2.0
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@3ec98142[Shutting down, pool size = 3, active threads = 2, queued tasks = 0, completed tasks = 164]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2055)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:825)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1355)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022.10.12 12:27:31 INFO  time: code lens generation in 13s
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@3ec98142[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 165]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2055)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:825)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1355)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022.10.12 12:27:41 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/.metals/lsp.trace.json or /home/hassan/.cache/metals/lsp.trace.json
+2022.10.12 12:27:42 INFO  logging to file /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/.metals/metals.log
+2022.10.12 12:27:42 INFO  Started: Metals version 0.11.9 in workspace '/home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src' for client Visual Studio Code 1.71.0.
+2022.10.12 12:27:44 INFO  time: initialize in 2.39s
+2022.10.12 12:27:48 WARN  Build server is not auto-connectable.
+2022.10.12 12:27:48 WARN  no build tool detected in workspace '/home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.10.12 12:27:48 WARN  no build target for: /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/main/scala/SingleCycle/Top_File.scala
+2022.10.12 12:27:55 INFO  no build target found for /home/hassan/Downloads/Scala-Chisel-Learning-Journey-main/src/main/scala/SingleCycle/Top_File.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.10.12 12:28:34 INFO  shutting down Metals
