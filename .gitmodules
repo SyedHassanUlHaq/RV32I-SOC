@@ -1,0 +1,3 @@
+[submodule "/home/hassan/Documents/RV32I SOC/caravan"]
+	path = /home/hassan/Documents/RV32I SOC/caravan
+	url = https://github.com/merledu/caravan.git
