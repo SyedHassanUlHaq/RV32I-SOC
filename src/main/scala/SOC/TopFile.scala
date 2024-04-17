@@ -15,6 +15,7 @@ class Top extends Module{
     val dMem_Adapter = Module(new TilelinkAdapter())
 
     val iMem_ = Module(new instrMemOut(new TLRequest, new TLResponse))
+    dontTouch(iMem_.io)
     val iMem_Adapter = Module(new TilelinkAdapter())
 
     dMem_Adapter.io.reqIn <> core.io.dmemReq
@@ -26,6 +27,4 @@ class Top extends Module{
     core.io.imemRsp <> iMem_Adapter.io.rspOut
     iMem_.io.insmReq <> iMem_Adapter.io.reqOut
     iMem_Adapter.io.rspIn <> iMem_.io.insmRsp
-
-
 }

@@ -15,7 +15,6 @@ class Core(val req:AbstrRequest, val rsp:AbstrResponse)(implicit val config:BusC
         val imemRsp = Flipped(Decoupled(rsp))
     })
     io.out := 0.U
-
     
     val pC_mod = Module(new pC)
     dontTouch(pC_mod.io)

@@ -52,6 +52,46 @@
     "target":"~Top|Top/iMem_Adapter:TilelinkAdapter/tlHost:TilelinkHost>stateReg"
   },
   {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmReq_ready"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmReq_valid"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmReq_bits_addrRequest"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmReq_bits_dataRequest"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmReq_bits_activeByteLane"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmReq_bits_isWrite"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmRsp_ready"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmRsp_valid"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmRsp_bits_dataResponse"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~Top|instrMemOut>io_insmRsp_bits_error"
+  },
+  {
     "class":"firrtl.annotations.LoadMemoryAnnotation",
     "target":"Top.instrMemOut.mem",
     "fileName":"/home/hassan/Documents/Assemble.txt",
